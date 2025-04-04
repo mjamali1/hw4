@@ -1,16 +1,18 @@
 #ifndef RECCHECK
 //if you want to add any #includes like <iostream> you must do them here (before the next endif)
-
-#endif
-
-#include "equal-paths.h"
 #include <algorithm>
 #include <iostream>
 using namespace std;
 
+#endif
+
+#include "equal-paths.h"
+
+
 
 // You may add any prototypes of helper functions here
 int getDepth(Node* node);
+// bool checkDepth(Node* root);
 
 bool equalPaths(Node * root)
 {
@@ -19,7 +21,6 @@ bool equalPaths(Node * root)
     if (root==nullptr){
         return true;
     }
-
     // if root -> right = empty
     if (root->right == nullptr) {
         if(getDepth(root->left) > 1) {
@@ -43,8 +44,7 @@ bool equalPaths(Node * root)
     else {
         return false;
     }
-
-
+        
 }
 
 int getDepth(Node* node) {
