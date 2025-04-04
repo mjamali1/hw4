@@ -7,7 +7,7 @@ CXXFLAGS=-g -Wall -std=c++11
 all: bst-test equal-paths-test
 
 bst-test: bst-test.cpp bst.h avlbst.h
-	$(CXX) $(CXXFLAGS) $(DEFS) $< -o $@
+	$(CXX) $(CXXFLAGS) $(DEFS) $< -o $@ 
 
 # Brute force recompile all files each time
 equal-paths-test: equal-paths-test.cpp equal-paths.cpp equal-paths.h
